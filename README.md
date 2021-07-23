@@ -20,12 +20,3 @@ clone back to the local：
       npm run server
       
 It will open the browser automatically，start local server，host is 8080.
-
-## 2.Effection
-
-
-![此处输入图片的描述][1]
-
-
-  [1]: https://github.com/forthealllight/redux-saga-example/blob/master/src/assets/images/login.gif
-"# flatlogic" 

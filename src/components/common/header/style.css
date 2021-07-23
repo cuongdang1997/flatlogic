@@ -1,0 +1,149 @@
+header .container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+header #logo {
+    width: 190px;
+    height: 70px;
+    margin-left: 15px;
+    display: inline-block;
+    background: url(https://flatlogic.com/assets/logo-b6ca6492a82bd9eddf58c40710235855b1c502097c23faae6306cd36973aaea8.svg) no-repeat center;
+    text-indent: -9999px;
+    background-position: left;
+}
+
+header nav#main_menu {
+    float: right;
+}
+
+#main_menu>ul>li:first-child {
+    margin-left: 0;
+}
+
+#main_menu > ul>li{
+	display: inline-block;
+	margin-left: 30px;
+
+}
+#main_menu li a {
+    font-weight: 400;
+    color: #777;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 14px;
+}
+
+#main_menu li a:hover {
+    font-weight: bold;
+}
+.dropdown_menu_first li a>img {
+	height: 20px;
+	width: 20px;
+	margin-right: 5px;
+
+
+}
+
+nav.dropdown_menu_custom {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+}
+.sub-menu-1{
+    display: grid;
+    grid-column-gap: 5px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    padding: 0;
+    list-style: none;
+    
+}
+div#item\ item2 {
+    grid-row: 2/3;
+}
+
+div#item\ item4 {
+    grid-row: 2/3;
+}
+
+.sub-menu-2{
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    width: 430px;
+    height: 278px;
+    
+}
+.sub-menu-2 li,.sub-menu-3 li,.sub-menu-4 li{
+    width: 215px;
+    height: 36px;
+    margin-top: 0;
+
+}
+#main_menu>ul>li:first-child:hover nav.dropdown_menu_custom.dropdown_menu_first{
+    display: block;
+}
+#main_menu>ul>li:nth-child(2):hover nav.dropdown_menu_custom.dropdown_menu_second{
+    display: block;
+}
+#main_menu>ul>li:nth-child(3):hover nav.dropdown_menu_custom.dropdown_menu_third{
+    display: block;
+}
+
+
+#main_menu>ul>li:nth-child(4):hover nav.dropdown_menu_custom.dropdown_menu_fourth{
+    display: block;
+}
+
+
+.banner .container > div{
+    display: flex;
+}
+.banner-left h1 {
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -1px;
+    word-spacing: 4px;
+    margin-top: 22px;
+    margin-bottom: 15px;
+    font-size: 64px;
+    text-align: left;
+}
+.label{
+    color: #fdae26;
+}
+.wrap-content> div{
+    height: 472px;
+    width: 585px;
+    margin-top: 40px;
+}
+.wrap-content>div>div, .ex-template h3,.ex-template>div>div{
+    margin: 0 15px;
+}
+.banner-left p{
+    display: block;
+    margin-block-end: 1em;
+    font-size: 18px;
+    line-height: 25.2px;
+}
+span.label.label.warning {
+    position: absolute;
+    font-size: 5;
+    padding-left: -0.5em;
+    padding-left: .5em;
+    font-size: 0.7em;
+}
+.banner-left a{
+    text-decoration: none;
+    color: cornflowerblue;
+}
+.banner-left div a{
+    color: black;
+}
+.footer-grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto 
+    
+}
