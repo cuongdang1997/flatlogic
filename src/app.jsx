@@ -1,6 +1,5 @@
 import 'whatwg-fetch';
 import 'babel-polyfill';
-import './common/css/common.css';
 import 'whatwg-fetch';
 import React from 'react';
 import {render} from 'react-dom';

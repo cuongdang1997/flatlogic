@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import LoginPanel from '../../components/loginPanel/index.jsx';
 import LoginSuccess from '../../components/loginSuccess';
 import Header from '../../components/common/header/index.jsx';
+import Footer from '../../components/common/footer/index.jsx';
 class Home extends React.Component{
   render(){
     const {isLogin,username,password,toLoginIn,toLoginOut,activityList,changeUsername,changePassword}=this.props;
@@ -12,6 +13,7 @@ class Home extends React.Component{
         <Header/>
         { isLogin?<LoginSuccess toLoginOut={toLoginOut} list={activityList}/>
         :<LoginPanel toLoginIn={toLoginIn} username={username} password={password} changeUsername={changeUsername} changePassword={changePassword}/> }
+        <Footer/>
       </div>
     )
   }
