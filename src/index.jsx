@@ -1,19 +1,12 @@
 import React from 'react';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
-import Root from './components/Root/Root';
-import { configureStore } from './store';
+import ReactDOM from 'react-dom';
+import App from "./app";
 
-export const store = configureStore();
+ReactDOM.render(
+    <App/>,
+    document.getElementById('root')
+);
 
-const rootExport = {
-    store,
-};
-
-export default rootExport;
-
-render((
-    <Provider store={store}>
-        <Root />
-    </Provider>
-), document.getElementById('root'));
+if (module.hot) {
+  module.hot.accept();
+}
