@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from "./app";
+import history from './history';
 
 ReactDOM.render(
-    <App/>,
+    <App history={history}/>,
     document.getElementById('root')
 );
 
