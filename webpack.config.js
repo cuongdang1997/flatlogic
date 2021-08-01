@@ -29,18 +29,15 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      },
+        use: [
+            MiniCssExtractPlugin.loader,
+            {
+              loader: 'css-loader',
+            },
+        ],
+    },
       {
-          test: /\.less$/,
-          use: [
-              'style-loader',
-              'css-loader',
-              'less-loader'
-          ]
-      },
-      {
-        test: /\.(scss|sass|css)$/,
+        test: /\.(scss|sass)$/,
         exclude: /node_modules/,
         loaders: [
           MiniCssExtractPlugin.loader,

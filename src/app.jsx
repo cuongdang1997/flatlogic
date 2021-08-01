@@ -1,7 +1,7 @@
 import React, { Suspense }  from "react";
-import "./styles/main.scss";
 import { Route, Router, Switch, Redirect } from "react-router-dom";
 import { Skeleton } from "antd";
+import Header from "./modules/common/components/header";
 
 const Login = React.lazy(() => import("./modules/auth/containers/login"));
 const SignUp = React.lazy(() => import("./modules/auth/containers/sign-up"));
@@ -17,6 +17,7 @@ const Loading = () => (
 
 const App = ({ history }) => {
     return <div>
+        <Header/>
         <Router history={history}>
             <Suspense fallback={<Loading />}>
                 <Switch>
