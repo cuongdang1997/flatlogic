@@ -68,6 +68,13 @@
     "redux-observable": "^1.0.0",
     "redux-saga": "^0.16.0",
     "redux-thunk": "^2.3.0",
-    "style-loader": "^0.23.1"
-  }
+    "style-loader": "^0.23.1",
+    "less": "2.7.1",
+    "less-loader": "4.0.5"
+  },
+  "checkFiles": [
+    "src/**/*.js*",
+    "src/**/*.ts*",
+    "src/**/*.less"
+  ]
 }

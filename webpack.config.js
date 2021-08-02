@@ -18,7 +18,18 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$|jsx/,
+          test: /\.(eot|ttf|png|jpg|jpeg|gif|svg|woff|woff2)$/,
+          use: [
+              {
+                  loader: 'file-loader',
+                  options: {
+                      name: 'images/[name].[ext]',
+                  },
+              },
+          ],
+      },
+      {
+        test: /\.js|\.jsx|\.es6$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -54,6 +65,37 @@ module.exports = {
         ]
       },
       {
+        test: /\.less$/,
+        use: [
+            MiniCssExtractPlugin.loader,
+            {
+                loader: 'css-loader',
+                query: {
+                    modules: true,
+                    sourceMap: false,
+                    importLoaders: 2,
+                    localIdentName: '[local]',
+                },
+            },
+            {
+                loader: 'less-loader',
+                options: {
+                    sourceMap: false,
+                    modifyVars: {
+                        '@primary-color': '#fdae26',
+                        '@border-radius-base': '4px',
+                        '@text-color': '#9a9fa9',
+                        '@heading-color': '#484848',
+                        '@text-color-secondary': '#c3c9d5',
+                        '@border-color-base': '#ebedf0',
+                        '@link-color': '#fdae26',
+                        '@font-family': "'montserrat', sans-serif !important",
+                    },
+                },
+            },
+        ],
+      },
+      {
         test: /\.(html)$/,
         exclude: /node_modules/,
         use: {
@@ -64,7 +106,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['.js', '.jsx', 'es6', '.css', '.scss'],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

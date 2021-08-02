@@ -4,7 +4,7 @@ import App from "./app";
 import history from './history';
 import { Provider } from 'react-redux';
 import { configureStore } from './store';
-import "antd/dist/antd.css";
+import 'antd/dist/antd.less';
 
 export const store = configureStore();
 
